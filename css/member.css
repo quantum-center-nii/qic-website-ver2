@@ -1,0 +1,95 @@
+.introBack {
+  width: 55%;
+  height: 300px;
+  background-color: #fff;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.intro h1 {
+  position: absolute;
+  font-size: 52px;
+  z-index: 5;
+  left: 50px;
+  font-family: font02;
+  letter-spacing: 10px;
+  top: 110px;
+}
+.intro h5 {
+    position: absolute;
+    font-size: 44px;
+    z-index: 5;
+    top: 210px;
+    color: #000;
+    font-family: font02;
+    left: 50px;
+}
+.intro h6 {
+    position: absolute;
+    font-size: 17px;
+    z-index: 5;
+    font-weight: 400;
+    top: 250px;
+    color: #000;
+    font-family: font01;
+    left: 50px;
+    text-align: inherit;
+}
+.mainImgContainer {
+  height: 700px;
+  overflow: hidden;
+}
+.memberAll{
+    margin-top: -190px;
+width: calc(100% - 100px);
+  margin-left: 50px;
+}
+
+.memberRow{
+ display: grid;
+  gap: 50px;
+  grid-template-columns: auto auto auto;
+  padding: 50px 0px;
+}
+.memberCard {
+  background-color: #fff;
+ 
+}
+.memberName{
+color: #000;
+  font-family: font01;
+  padding: 40px 50px 40px 30px;
+  font-size: 30px;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+.memberGroupe{
+    color: #000;
+  font-size: 20px;
+  font-family: font01;
+  padding: 30px 0px 0px 30px;
+}
+.memberTitle{
+color: #9f9f9f;
+  padding: 0px 0px 0px 30px;
+  font-size: 22px;
+  font-family: font01;
+  margin: 100px 40px 40px 0px;
+  text-align: right;
+}
+.memberImg{
+    width: 170px;
+  margin : 0px 0px 0px 30px;
+  background-color: #9f9f9f;
+}
+.memberLink{
+    color: white;
+  background-color: #9f9f9f;
+  padding: 10px 0px 10px 10px;
+  font-size: 15px;
+  font-family: font01;
+  margin: 20px 30px 0px 30px;
+}
+.memberLink:hover{
+    background-color:black;
+}
