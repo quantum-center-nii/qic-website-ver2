@@ -95,8 +95,8 @@ nav.menu{
 
 /* Hamburger on the far right */
 .hamburger{
-  width: 34px;
-  height: 26px;
+  width: 24px;
+  height: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
