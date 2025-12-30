@@ -28,7 +28,7 @@ ul, li { list-style: none; }
 
 /* ---------- Variables ---------- */
 :root{
-  --nav-h: 84px;
+  --nav-h: 64px;
   --pad: 16px;
   --card-max: 520px;
 
