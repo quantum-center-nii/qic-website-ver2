@@ -1,0 +1,102 @@
+@font-face {
+  font-family: font01;
+  src: url(T-StarPro-Bold.ttf);
+}
+@font-face {
+  font-family: font02;
+  src: url(T-StarPro-Heavy.ttf);
+}
+@font-face {
+  font-family: font03;
+  src: url(T-StarPro-Light.ttf);
+}
+@font-face {
+  font-family: font04;
+  src: url(T-StarPro-Medium.ttf);
+}
+
+
+:root{
+  --stagger: 190px; 
+  --gap: 50px;
+}
+
+
+.baseLeft{
+  margin-top: -190px;
+  z-index: 0;         
+  position: relative;
+  margin-bottom: var(--gap);
+}
+
+
+
+
+.baseline2{
+  margin-bottom: calc(50px + var(--stagger));
+}
+
+/* =========================================================
+   Research mobile: overlay card at top of hero image
+   ========================================================= */
+
+body.page-research .hero{
+  position: relative;
+  overflow: hidden;
+}
+
+/* HERO CARD */
+body.page-research .heroCard{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 16svh;              /* <-- white card height */
+  width: 100%;
+
+  z-index: 20;
+  transform: none;            /* cancels index translateY */
+
+  background: #fff;
+  padding: 16px var(--pad);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;      /* right-aligned */
+  justify-content: space-between;
+}
+
+/* Kill index background layer */
+body.page-research .heroCard .introBack{
+  display: none;
+}
+
+/* Reset index absolute positioning */
+body.page-research .heroCard h1,
+body.page-research .heroCard h5,
+body.page-research .heroCard h6{
+  position: static !important;
+  margin: 0;
+  color: #000;
+}
+
+/* Typography */
+body.page-research .heroCard h1{
+  font-family: font02;
+  font-size: 28px;
+  letter-spacing: 4px;
+  line-height: 1;
+  transform: translateX(4px);
+}
+
+body.page-research .heroCard h5{
+  font-family: font02;
+  font-size: 20px;
+}
+
+body.page-research .heroCard h6{
+  font-family: font01;
+  font-size: 10px;
+  margin-top: 4px;
+}
