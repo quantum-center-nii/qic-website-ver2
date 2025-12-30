@@ -17,13 +17,13 @@
 
 
 :root{
-  --stagger: 190px; 
+  --stagger: 45svh; 
   --gap: 50px;
 }
 
 
 .baseLeft{
-  margin-top: -190px;
+  margin-top: calc(-1 * var(--stagger));
   z-index: 0;         
   position: relative;
   margin-bottom: var(--gap);
