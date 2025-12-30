@@ -128,7 +128,7 @@ width: calc(100vw - 110px);
   top: 440px;
 }
 li a{
-  font-family: 'font01';
+  font-family: font01;
   text-decoration: none;
   color: #fff;
   font-size: 14px;
@@ -214,7 +214,6 @@ footer{
 }
 #alllink p{
  width: 130px;
-  text-align: center;
   text-align: center;
   border-left-width: 2px;
   border-left-style: solid;
@@ -329,5 +328,8 @@ footer{
   margin-bottom: 50px;
 }
 
-
-
+@media (min-width: 769px) {
+  .nav-toggle {
+    display: none;
+  }
+}
