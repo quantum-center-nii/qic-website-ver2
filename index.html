@@ -4,44 +4,48 @@
     <title>Qu Center</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/index.css">
-     <link rel="stylesheet" href="css/stylesheet.css">
-
-
-
+    <link rel="stylesheet" href="css/index.css" media="(min-width: 769px)">
+    <link rel="stylesheet" href="css/index_good_for_mobile.css" media="(max-width: 769px)">
+    <link rel="stylesheet" href="css/stylesheet.css">
   </head>
+  
   <body>
-   
-
-  <!-- Navbar (sit on top) -->
-    <div id="backLightContainerMobile">
-      <div id="bacLightMobile"></div>
-    </div> 
 
   <!-- Header -->
   <header class="grey01">
     <nav class="menu">
      <p class="topTitle">Global Research Center <br>for Quantum Information Science</p>
      <img class="logo01" src="img/quclogo.svg" alt="logo quantum center">
-        <ul class ="navContainer">
-          <li><a href="#">HOME</a></li>
-          <li><a href="research.html">RESEARCH</a></li>
-          <li><a href="member.html">MEMBER</a></li>
-        </ul>
-      </nav>
+        <input class="nav-toggle" type="checkbox" id="nav-toggle">
+        <label class="hamburger" for="nav-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+      <ul class="navContainer">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="research.html">RESEARCH</a></li>
+        <li><a href="member.html">MEMBER</a></li>
+      </ul>
+
+    </nav>
   </header>
   <!-- Page content -->
   <main>
-    <div class="mainImgContainer">
-     <img class="mainImg" src="img/lnk01_0606.jpg" alt="main image"> 
-     </div>
-    <section class="intro bright">
+  <div class="hero" id="hero">
+    <div class="mainImgContainer heroMedia">
+      <img class="mainImg heroImg" src="img/lnk01_0606.jpg" alt="main image">
+    </div>
+
+    <section class="intro bright heroCard">
       <div class="introBack"></div>
-      <h1 class="colorTextAnim"> QUANTUM<br>CENTER</h1>
+      <h1 class="colorTextAnim">QUANTUM<br>CENTER</h1>
       <h4>Global Research Center for Quantum Information Science</h4>
       <h5 class="colorTextAnim">NII</h5>
       <h6>japan</h6>
     </section>
+  </div>
     <h3 class="introText"> INTRO</h3>
     <section class="baseline">
       <article class="introtext">
@@ -49,9 +53,9 @@
         <p>Our research center is dedicated to advancing quantum information science by exploring fundamental principles at the intersection of quantum physics and information theory. Over the past few decades, quantum technologies have experienced remarkable progress. Although many engineering challenges still demand practical solutions, continuous theoretical inquiry remains equally essential to drive sustained advancements.</p>
       </article>
     </section>
-    </section>
+    
     <section class="baseline baseline2">
-     </div>
+     
       <article class="introtext">
         <h2>Join us as we shape the future of quantum information technologies and explore their profound implications for science, industry, society, and our future.</h2>
         <p>As a member of Japan's Inter-University Research Institute Corporations, we actively support an international community of scholars, students, and industry partners through collaborative research opportunities and extensive academic resources.</p>
