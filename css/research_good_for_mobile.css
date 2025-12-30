@@ -52,7 +52,7 @@ body.page-research .heroCard{
   left: 0;
   right: 0;
 
-  height: 16svh;              /* <-- white card height */
+  height: 20svh;              /* <-- white card height */
   width: 100%;
 
   z-index: 20;
@@ -93,7 +93,7 @@ body.page-research .heroCard h1{
 
 body.page-research .heroCard h5{
   font-family: font02;
-  font-size: 20px;
+  font-size: 24px;
   margin: 4px 0 0 0;
 }
 
