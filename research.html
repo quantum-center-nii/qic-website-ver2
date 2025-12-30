@@ -4,44 +4,52 @@
     <title>Qu Center</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/index.css">
-     <link rel="stylesheet" href="css/research.css">
+    <link rel="stylesheet" href="css/index.css" media="(min-width: 769px)">
+    <link rel="stylesheet" href="css/index_good_for_mobile.css" media="(max-width: 769px)">
+    <link rel="stylesheet" href="css/research.css" media="(min-width: 769px)">
+    <link rel="stylesheet" href="css/research_good_for_mobile.css" media="(max-width: 769px)">
      
 
 
   </head>
-  <body>
+  <body class="page-research">
    
-
-  <!-- Navbar (sit on top) -->
-    <div id="backLightContainerMobile">
-      <div id="bacLightMobile"></div>
-    </div> 
 
   <!-- Header -->
   <header class="grey01">
     <nav class="menu">
      <p class="topTitle">Global Research Center <br>for Quantum Information Science</p>
      <img class="logo01" src="img/quclogo.svg" alt="logo quantum center">
-        <ul class ="navContainer">
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="research.html">RESEARCH</a></li>
-          <li><a href="member.html">MEMBER</a></li>
-        </ul>
-      </nav>
+        <input class="nav-toggle" type="checkbox" id="nav-toggle">
+        <label class="hamburger" for="nav-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+      <ul class="navContainer">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="research.html">RESEARCH</a></li>
+        <li><a href="member.html">MEMBER</a></li>
+      </ul>
+
+    </nav>
   </header>
+
+
   <!-- Page content -->
     <main>
-      <div class="mainImgContainer">
-        <img class="mainImg" src="img/lnk01_0964.jpg" alt="main image" />
+      <div class="hero" id="hero">
+      <div class="mainImgContainer heroMedia">
+       <img class="mainImg heroImg" src="img/lnk01_0964.jpg" alt="main image">
       </div>
-
-      <section class="intro bright">
+      <section class="intro bright heroCard">
         <div class="introBack"></div>
         <h1 class="colorTextAnim">RESEARCH</h1>
         <h5 class="colorTextAnim">NII</h5>
         <h6>japan</h6>
       </section>
+      </div>
 
       <section class="baseline baseLeft">
         <article class="introtext">
@@ -70,9 +78,11 @@
             beyond individual devices becomes a fundamental challenge. Quantum networks
             provide a general framework in which multiple quantum systems can be
             interconnected and jointly exploited as a larger computational and information-processing resource.
-            Investigating the theoretical foundations of quantum networks requires proper abstractions
-            of quantum interconnects and a thorough understanding of the capabilities and limitations imposed by
-            networked architectures.
+            We investigate the theoretical foundations of quantum networks as an enabling
+            structure for scalable quantum information processing, including abstract
+            models of quantum interconnects, the capabilities and limitations imposed by
+            networked architectures, and the fundamental differences between isolated and
+            network-embedded quantum systems.
           </p>
         </article>
       </section>
@@ -81,13 +91,15 @@
         <article class="introtext">
           <h2>Principles of Distributed Quantum Computation</h2>
           <p>
-            Connected by quantum networks, quantum computation can be performed across multiple,
-            physically separated quantum nodes. We aim to clarify
+            This research explores how quantum computation can be performed across multiple,
+            physically separated quantum nodes. We study universal principles governing
+            distributed quantum operations, including how quantum tasks can be decomposed
+            across nodes, how non-local correlations and communication enable joint
+            operations, and what fundamental constraints arise when computation is carried
+            out in a spatially distributed manner. Through these studies, we aim to clarify
             how the structure of distributed quantum computation differs from that of
             monolithic devices, and how such structures can be systematically exploited to
-            extend the reach and functionality of quantum computation. The principles governing
-            multi-node computation differ fundamentally between classical and quantum settings, 
-            reflecting the incompatibility of their underlying physical descriptions in multipartite systems.
+            extend the reach and functionality of quantum computation.
           </p>
         </article>
       </section>
@@ -141,15 +153,14 @@
       
        <section class="baseline baseLeft">
         <article class="introtext">
-          <h2>High-Fidelity Modeling and Simulation of Quantum Systems</h2>
+          <h2>Modeling and Simulation Frameworks for Large-Scale Quantum Systems</h2>
           <p>
             We develop theory-driven modeling and simulation frameworks that aim to capture
             the microscopic dynamics of quantum devices interacting with quantum fields in
             network-relevant settings. A central challenge is achieving sufficient accuracy
             to faithfully represent error mechanisms, correlations, and dynamical effects
-            that directly impact fault-tolerant quantum information processing, where small
-            modeling errors can translate into substantial overhead.
-            To this end, we study efficient methods for simulating high-dimensional
+            that directly impact large-scale and fault-tolerant quantum information
+            processing. To this end, we study efficient methods for simulating high-dimensional
             quantum systems, balancing computational tractability with the level of precision
             required for reliable device modeling and system-level analysis.
           </p>
@@ -177,7 +188,7 @@
 
       <section class="baseline baseLeft">
         <article class="introtext">
-          <h2>Non-Classicality in Quantum Systems</h2>
+          <h2>Non-Classicality in Quantum Systems.</h2>
           <p>
             Quantum mechanics reveals phenomena that challenge classical
             intuition, showcasing the unique nature of quantum systems. We
