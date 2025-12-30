@@ -52,19 +52,20 @@ body.page-research .heroCard{
   left: 0;
   right: 0;
 
-  height: 20svh;              /* <-- white card height */
+  height: clamp(120px, 20svh, calc(2.4 * var(--nav-h)) ) ;              /* <-- white card height */
   width: 100%;
 
   z-index: 20;
   transform: none;            /* cancels index translateY */
 
   background: #fff;
-  padding: 16px var(--pad);
+  padding: 0 var(--pad);
+  
 
   display: flex;
   flex-direction: column;
   align-items: flex-end;      /* right-aligned */
-  justify-content: space-between;
+/*  justify-content: space-between; */
 }
 
 /* Kill index background layer */
@@ -87,19 +88,18 @@ body.page-research .heroCard h1{
   font-size: 28px;
   letter-spacing: 4px;
   line-height: 1;
-  margin-top: -3px;
+  margin-top: clamp(20px, 3svh, 100svh);
   transform: translateX(4px);
 }
 
 body.page-research .heroCard h5{
   font-family: font02;
   font-size: 24px;
-  margin: 4px 0 0 0;
+  margin-top: calc(3svh);
 }
 
 body.page-research .heroCard h6{
   font-family: font01;
   font-size: 10px;
-  margin-top: 0px;
+  /* margin-top: calc(3svh + 5px); */
 }
-
