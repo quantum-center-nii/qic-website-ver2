@@ -1,0 +1,304 @@
+@font-face {
+  font-family: font01;
+  src: url(T-StarPro-Bold.ttf);
+}
+@font-face {
+  font-family: font02;
+  src: url(T-StarPro-Heavy.ttf);
+}
+@font-face {
+  font-family: font03;
+  src: url(T-StarPro-Light.ttf);
+}
+@font-face {
+  font-family: font04;
+  src: url(T-StarPro-Medium.ttf);
+}
+
+:root{
+  --nav-h: 64px;
+  --pad: 16px;
+  --card-max: 520px;
+
+  --hero-block: 90svh;   /* nav + hero image target */
+  --spill: 18px;         /* how much card spills into grey */
+  --card-spill-vp: 12svh;
+}
+
+/* ---------- Base reset ---------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  background: #f2f2f2;
+  overflow-x: hidden;
+  font-family: 'Lato', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+a { text-decoration: none; }
+ul, li { list-style: none; }
+
+header.grey01{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  background: #242424;
+  z-index: 1000;
+}
+
+/* Make nav a flex row and reorder items to:
+   [logo] [title grows] [hamburger] */
+nav.menu{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 var(--pad);
+}
+
+/* Reorder without changing HTML */
+.logo01{ order: 1; }
+.topTitle{ order: 2; }
+.nav-toggle{ order: 3; }
+.hamburger{ order: 4; }
+.navContainer{ order: 5; }
+
+.logo01{
+  width: 44px;
+  height: auto;
+  position: static;
+  z-index: 2;
+}
+
+/* Title sits next to logo, wraps nicely, never overlaps */
+.topTitle{
+  color: #fff;
+  font-family: font03;
+  font-size: 14px;
+  line-height: 1.15;
+  position: static;
+  flex: 1 1 auto;
+  min-width: 0;          /* allows wrapping inside flex */
+}
+
+/* Hide the checkbox (so it never appears as a visible square) */
+.nav-toggle{
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+/* Hamburger on the far right */
+.hamburger{
+  width: 24px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-left: auto;
+  z-index: 1100;
+}
+.hamburger span{
+  height: 2px;
+  width: 100%;
+  background: #fff;
+  display: block;
+}
+
+/* Dropdown menu: directly under the bar, aligned to the right */
+.navContainer{
+  position: fixed;
+  top: var(--nav-h);
+  right: 0;
+  background: #242424;
+  display: none;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px 22px;
+  z-index: 1200;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.navContainer li{ margin: 0; list-style: none; }
+.navContainer a{
+  color: #fff;
+  font-family: font01;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+.navContainer a:hover{ color: #959595; }
+
+/* Toggle open */
+.nav-toggle:checked ~ .navContainer{ display: flex; }
+
+/* =========================================================
+   MAIN LAYOUT
+   ========================================================= */
+main{
+  padding-top: var(--nav-h); /* ensure content begins below fixed bar */
+  margin-bottom: 50px;
+}
+
+body.page-member .introBack {
+  width: 55%;
+  height: 300px;
+  background-color: #fff;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+body.page-member .intro h1 {
+  position: absolute;
+  font-size: 52px;
+  z-index: 5;
+  left: 50px;
+  font-family: font02;
+  letter-spacing: 10px;
+  top: 110px;
+}
+body.page-member .intro h5 {
+    position: absolute;
+    font-size: 44px;
+    z-index: 5;
+    top: 210px;
+    color: #000;
+    font-family: font02;
+    left: 50px;
+}
+body.page-member .intro h6 {
+    position: absolute;
+    font-size: 17px;
+    z-index: 5;
+    font-weight: 400;
+    top: 250px;
+    color: #000;
+    font-family: font01;
+    left: 50px;
+    text-align: inherit;
+}
+/* body.page-member .mainImgContainer {
+  height: 700px;
+  overflow: hidden;
+} */
+body.page-member .memberAll{
+  margin-top: -400px;
+  /* width: calc(100% - 50px); */
+  margin-left: 40px;
+  margin-right: 15px;
+}
+
+body.page-member .memberRow{
+ display: flex;
+  gap: 50px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body.page-member .memberCard {
+  background-color: #fff;
+ z-index: 10;
+}
+body.page-member .memberName{
+color: #000;
+  font-family: font01;
+  padding: 40px 50px 20px 30px;
+  font-size: 30px;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+body.page-member .memberGroupe{
+    color: #000;
+  font-size: 20px;
+  font-family: font01;
+  padding: 30px 0px 0px 30px;
+}
+body.page-member .memberTitle{
+color: #9f9f9f;
+  padding: 0px 0px 0px 30px;
+  font-size: 22px;
+  font-family: font01;
+  margin: 15px 40px 40px 0px;
+  text-align: right;
+}
+body.page-member .memberImg{
+    width: 170px;
+  margin : 0px 0px 0px 30px;
+  background-color: #9f9f9f;
+}
+body.page-member .memberLink{
+    color: white;
+  background-color: #9f9f9f;
+  padding: 10px 0px 10px 10px;
+  font-size: 15px;
+  font-family: font01;
+  margin: 20px 30px 0px 30px;
+}
+body.page-member .memberLink:hover{
+    background-color:black;
+}
+
+
+body.page-member .hero{
+  position: relative;
+  overflow: hidden;
+}
+
+/* HERO CARD */
+body.page-member .heroCard{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: clamp(120px, 20svh, calc(2.4 * var(--nav-h)) ) ;              /* <-- white card height */
+  width: 70vw;
+
+  z-index: 20;
+  transform: none;            /* cancels index translateY */
+
+  background: #fff;
+  padding: 0 var(--pad);
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;     
+/*  justify-content: space-between; */
+}
+
+/* Kill index background layer */
+body.page-member .heroCard .introBack{
+  display: none;
+}
+
+/* Reset index absolute positioning */
+body.page-member .heroCard h1,
+body.page-member .heroCard h5,
+body.page-member .heroCard h6{
+  position: static !important;
+  margin: 0;
+  color: #000;
+  margin-left: 10px;
+}
+
+/* Typography */
+body.page-member .heroCard h1{
+  font-family: font02;
+  font-size: 32px;
+  letter-spacing: 4px;
+  margin-top: clamp(20px, 3svh, 100svh);
+  /* transform: translateX(4px); */
+}
+
+body.page-member .heroCard h5{
+  font-family: font02;
+  font-size: 28px;
+  height: 28px;
+  margin-top: 3svh;
+}
+
+body.page-member .heroCard h6{
+  font-family: font01;
+  font-size: 12px;
+  margin-top: 2px;
+}
