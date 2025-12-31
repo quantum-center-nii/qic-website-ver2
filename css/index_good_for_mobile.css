@@ -15,76 +15,75 @@
   src: url(T-StarPro-Medium.ttf);
 }
 
-/* ---------- Base reset ---------- */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html, body { height: 100%; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: 'Lato';
+  text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
 body {
-  background: #f2f2f2;
-  overflow-x: hidden;
-  font-family: 'Lato', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1;
+  background-color: #f2f2f2;
 }
-a { text-decoration: none; }
-ul, li { list-style: none; }
-
-/* ---------- Variables ---------- */
-:root{
-  --nav-h: 64px;
-  --pad: 16px;
-  --card-max: 520px;
-
-  --hero-block: 90svh;   /* nav + hero image target */
-  --spill: 18px;         /* how much card spills into grey */
-  --card-spill-vp: 12svh;
+ol, ul {
+  list-style: none;
 }
-
-/* =========================================================
-   TOP NAV (fixed, stable layout)
-   ========================================================= */
-header.grey01{
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  height: var(--nav-h);
-  background: #242424;
-  z-index: 1000;
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.colorDivAnim {
+  background-color: red;
 }
 
-/* Make nav a flex row and reorder items to:
-   [logo] [title grows] [hamburger] */
-nav.menu{
-  height: 100%;
-  width: 100%;
+
+
+
+header{
+  height: 80px;
+  position: relative;
+}
+nav{
   display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 0 var(--pad);
+ 
+  position: fixed;
+  width: 100%;
+  z-index: 30;
+  height: 90px;
+
 }
 
-/* Reorder without changing HTML */
-.logo01{ order: 1; }
-.topTitle{ order: 2; }
-.nav-toggle{ order: 3; }
-.hamburger{ order: 4; }
-.navContainer{ order: 5; }
-
-.logo01{
-  width: 44px;
-  height: auto;
-  position: static;
-  z-index: 2;
-}
-
-/* Title sits next to logo, wraps nicely, never overlaps */
-.topTitle{
-  color: #fff;
-  font-family: font03;
-  font-size: 14px;
-  line-height: 1.15;
-  position: static;
-  flex: 1 1 auto;
-  min-width: 0;          /* allows wrapping inside flex */
-}
-
-/* Hide the checkbox (so it never appears as a visible square) */
 .nav-toggle{
   position: absolute;
   opacity: 0;
@@ -93,232 +92,245 @@ nav.menu{
   pointer-events: none;
 }
 
-/* Hamburger on the far right */
-.hamburger{
-  width: 24px;
-  height: 20px;
+
+.navContainer{
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-  margin-left: auto;
-  z-index: 1100;
+  margin-top: 40px;
+  right: 80px;
+  position: absolute;
 }
-.hamburger span{
-  height: 2px;
-  width: 100%;
-  background: #fff;
-  display: block;
+.navLeft{
+margin: 0 auto 0 8%;
+}
+.navRight{
+margin: 0 8% 0 auto;
+}
+li{
+  margin: 0 20px;
 }
 
-/* Dropdown menu: directly under the bar, aligned to the right */
-.navContainer{
-  position: fixed;
-  top: var(--nav-h);
-  right: 0;
-  background: #242424;
-  display: none;
-  flex-direction: column;
-  gap: 14px;
-  padding: 18px 22px;
-  z-index: 1200;
-  border: 1px solid rgba(255,255,255,0.08);
+.mainImg{
+  width: 100vw;
+  margin-top: 90px;
 }
-.navContainer li{ margin: 0; list-style: none; }
-.navContainer a{
-  color: #fff;
+.bottomImg{
+width: calc(100vw - 110px);
+  position: absolute;
+  z-index: -10;
+  bottom: -500px;
+}
+.imgContain{
+  position: absolute;
+  height: 500px;
+  margin-top: -500px;
+  overflow: hidden;
+  width: calc(100% - 100px);
+  left: 50px;
+}
+.introBack{
+  width: 65%;
+  height: 370px;
+  background-color: #fff;
+  position: absolute;
+  right: 0px;
+  top: 440px;
+}
+li a{
   font-family: font01;
-  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
   letter-spacing: 2px;
 }
-.navContainer a:hover{ color: #959595; }
-
-/* Toggle open */
-.nav-toggle:checked ~ .navContainer{ display: flex; }
-
-/* =========================================================
-   MAIN LAYOUT
-   ========================================================= */
-main{
-  padding-top: var(--nav-h); /* ensure content begins below fixed bar */
-}
-
-/* =========================================================
-   HERO (image fills viewport minus the top bar)
-   ========================================================= */
-.hero{
-  position: relative;
-  height: calc(var(--hero-block) - var(--nav-h));
-  overflow: visible;            /* key: allow card to spill */
-  margin-bottom: calc(var(--card-spill-vp) + 6svh);  /* creates visible grey strip below hero */
-  background: #000; /* avoids gray flashes while image loads */
+li a:hover{
+  color: #959595;
 }
 .mainImgContainer{
-  height: 100%;
+  height: 720px;
   overflow: hidden;
 }
-.mainImg{
+.back01{
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 42%;
-  margin-top: 0; /* IMPORTANT: remove the old 90px margin */
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+
 }
 
-/* =========================================================
-   HERO CARD (your HTML has an empty .introBack div, so we
-   use it as the white panel background and pad on the section)
-   ========================================================= */
-.heroCard{
-  position: absolute;
 
-  right: 0;      /* flush to screen edge */
-  bottom: 0;     /* attach to hero bottom */
 
-  width: min(85vw, var(--card-max));
-  padding:
-    clamp(16px, 1.2em, 28px)
-    clamp(16px, 1.2em, 28px)
-    clamp(20px, 1.5em, 36px);
-  z-index: 10;
-  transform: translateY(var(--card-spill-vp));
-}
-
-/* white panel */
-.heroCard .introBack{
-  position: absolute;
-  inset: 0;
-  background: #fff;
-  z-index: 0;
-}
-
-/* put text above the panel */
-.heroCard h1,
-.heroCard h4,
-.heroCard h5,
-.heroCard h6{
-  position: relative;
-  z-index: 1;
-}
-
-/* NII/japan: top-right inside card */
-.heroCard h5{
-  position: absolute;
-  top: 34px;
-  right: 18px;
-  font-family: font02;
-  font-size: 32px;
-  color: #000;
-}
-.heroCard h6{
-  position: absolute;
-  top: 72px;
-  right: 18px;
-  font-family: font01;
-  font-size: 13px;
-  color: #000;
-}
-
-/* QUANTUM / CENTER: keep within card; reduce “over-breaking” feel */
-.heroCard h1{
-  margin-top: 104px;               /* clears NII/japan block */
-  font-family: font01;
-  font-size: clamp(41px, 14vw, 65px);
-  letter-spacing: 0.15em;            /* slightly tighter to stay inside */
-  line-height: 0.95;
-  color: #000;
-  max-width: 100%;
-  overflow-wrap: normal;
-  word-break: keep-all;
-}
-
-/* Subtitle: airy spacing below it */
-.heroCard h4{
-  margin-top: 18px;
-  padding-bottom: 90px;            /* “more air below Global Research…” */
-  font-family: font03;
-  font-size: clamp(18px, 6vw, 28px);
-  line-height: 1.4;
-  color: #9f9f9f;
-  max-width: 28ch;
-}
-
-/* =========================================================
-   SECTION TITLE + CARDS (mobile readability)
-   ========================================================= */
 .introText{
-  text-align: center;
-  font-family: font01;
+font-family: font01;
   color: #9f9f9f;
-  font-size: 32px;
-  letter-spacing: 6px;
-  margin: 36px 0 18px;
+  width: 100%;
+  text-align: center;
+  margin-top: 150px;
+  font-size: 40px;
+  letter-spacing: 7px;
+  margin-bottom: 50px;
 }
+
 
 .baseline{
-  background: #fff;
-  margin: 0 var(--pad);
-  padding: 24px 22px;
+  margin: 0px 0px 0px 50px;
+  background-color: white;
+  width: 50%;
+  padding: 50px 50px 50px 50px;
 }
-.baseline2{
-  margin: 22px var(--pad);
-  padding: 24px 22px;
-}
-
-.introtext h2{
-  font-family: font01;
-  font-size: clamp(20px, 7vw, 40px);
-
-  /* Reduce “too many short lines” a bit by slightly tightening tracking
-     and allowing a touch more measure via padding above. */
-  letter-spacing: 0.5px;
-  line-height: 1.08;
+.introtext h2 {
+  font-size: 50px;
+  padding: 0px 0px 0px 0px;
   color: #000;
+  font-family: font01;
 }
 .introtext p{
-  margin-top: 14px;
-  font-family: font03;
-  font-size: 17px;
-  line-height: 1.55;
-  letter-spacing: 0.35px;
+  font-size: 19px;
+  padding: 40px 0px 0px 0px;
+  line-height: 1.3;
+  letter-spacing: 2px;
   color: #000;
+  font-family: font03;
 }
 
-/* =========================================================
-   HIDE BOTTOM IMAGE ON MOBILE (show footer after 2nd card)
-   ========================================================= */
-.imgContain{
-  display: none;
-}
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
 footer{
-  background: #7d7d7d;
-  padding: 48px var(--pad) 28px;
+  padding: 60px 0px 30px 0px;
+  background-color: #7d7d7d;
+}
+#allbuttonlink{
+  margin: 0 auto;
+  width: 700px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+#allbuttonlink{
+  margin: 0 auto;
+  width: 700px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
 }
 #alllink{
+  margin: 50px auto 0;
+  width: 700px;
+  position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  color: #182640;
+  font-size: 20px;
 }
 #alllink p{
+ width: 130px;
+  text-align: center;
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-right-width: 2px;
+  border-right-style: solid;
+  text-decoration: none;
   color: #fff;
   font-family: font04;
+  font-size: 23px;
+}
+#alllink p:hover{
+  color: #4f4f4f;
+}
+
+#legal p{
+  margin: 50px auto 0px auto;
+  width: 700px;
+  color: #fff;
   font-size: 20px;
   text-align: center;
-  border-left: 2px solid #fff;
-  border-right: 2px solid #fff;
-  width: 150px;
-  padding: 6px 0;
-}
-#alllink p:hover{ color:#4f4f4f; }
-#legal p{
-  margin-top: 28px;
-  color: #fff;
   font-family: font03;
-  font-size: 18px;
-  text-align: center;
+}
+
+.container{
+  padding-top: 15px;
+  padding-bottom: 1px;
+}
+.line{
+  height: 10px;
 }
 
 
+.intro h1{
+ position: absolute;
+  font-size: 65px;
+  z-index: 5;
+  top: 530px;
+  left: 38%;
+  font-family: font01;
+  letter-spacing: 16px;
+}
+.intro h4{
+ position: absolute;
+  font-size: 28px;
+  z-index: 5;
+  font-weight: 600;
+  top: 670px;
+  color: #9f9f9f;
+  width: 35%;
+  left: 38%;
+  font-family: font03;
+}
+.intro h5{
+ position: absolute;
+  right: 49px;
+  font-size: 44px;
+  z-index: 5;
+  top: 460px;
+  color: #000;
+  font-family: font02;
+  
+}
+.intro h6{
+  position: absolute;
+  right: 50px;
+  font-size: 17px;
+  z-index: 5;
+  font-weight: 400;
+  top: 500px;
+  color: #000;
+  text-align: right;
+  font-family: font01;
+}
+
+.logo01{
+  position: relative;
+    z-index: 10;
+  width: 55px;
+  top: -14px;
+  left: 0px;
+}
+.logo02{
+  fill: red;
+  z-index: 10;
+  width: 60px;
+  top: 40px;
+  position: relative;
+}
+
+
+
+
+.grey01{
+  background-color: #242424;
+  position: fixed;
+  width: calc(100% - 100px);
+  height: 90px;
+  z-index: 10;
+  padding: 0px 50px;
+}
+.topTitle{
+ color: white;
+  position: absolute;
+  bottom: 14px;
+  font-family: font03;
+  font-size: 14px;
+}
+
+.baseline2{
+  margin-left: calc(50% - 150px);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
