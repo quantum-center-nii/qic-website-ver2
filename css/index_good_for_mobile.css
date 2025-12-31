@@ -223,7 +223,7 @@ main{
 .heroCard h1{
   margin-top: 104px;               /* clears NII/japan block */
   font-family: font01;
-  font-size: clamp(40px, 10.5vw, 56px);
+  font-size: clamp(46px, 14vw, 92px);
   letter-spacing: 0.15em;            /* slightly tighter to stay inside */
   line-height: 0.95;
   color: #000;
@@ -235,9 +235,9 @@ main{
 /* Subtitle: airy spacing below it */
 .heroCard h4{
   margin-top: 18px;
-  padding-bottom: 80px;            /* “more air below Global Research…” */
+  padding-bottom: 90px;            /* “more air below Global Research…” */
   font-family: font03;
-  font-size: 16px;
+  font-size: clamp(20px, 6vw, 40px);
   line-height: 1.4;
   color: #9f9f9f;
   max-width: 28ch;
