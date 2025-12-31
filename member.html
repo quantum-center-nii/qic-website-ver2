@@ -4,43 +4,50 @@
     <title>Qu Center</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/index.css">
-     <link rel="stylesheet" href="css/stylesheet.css">
-     <link rel="stylesheet" href="css/member.css">
-
-
+    <link rel="stylesheet" href="css/index.css" media="(min-width: 769px)">
+    <link rel="stylesheet" href="css/index_good_for_mobile.css" media="(max-width: 769px)">
+    <link rel="stylesheet" href="css/member.css" media="(min-width: 769px)">
+    <link rel="stylesheet" href="css/member_good_for_mobile.css" media="(max-width: 768px)">
+    <link rel="stylesheet" href="css/stylesheet.css">
   </head>
-  <body>
-   
-
-  <!-- Navbar (sit on top) -->
-    <div id="backLightContainerMobile">
-      <div id="bacLightMobile"></div>
-    </div> 
-
+  
+  
+  <body class="page-member">
   <!-- Header -->
   <header class="grey01">
     <nav class="menu">
      <p class="topTitle">Global Research Center <br>for Quantum Information Science</p>
      <img class="logo01" src="img/quclogo.svg" alt="logo quantum center">
-        <ul class ="navContainer">
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="research.html">RESEARCH</a></li>
-          <li><a href="member.html">MEMBER</a></li>
-        </ul>
-      </nav>
+        <input class="nav-toggle" type="checkbox" id="nav-toggle">
+        <label class="hamburger" for="nav-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+      <ul class="navContainer">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="research.html">RESEARCH</a></li>
+        <li><a href="member.html">MEMBER</a></li>
+      </ul>
+
+    </nav>
   </header>
+
   <!-- Page content -->
   <main>
-    <div class="mainImgContainer">
-     <img class="mainImg" src="img/lnk01_0605.jpg" alt="main image"> 
-     </div>
-    <section class="intro bright">
-      <div class="introBack"></div>
-      <h1 class="colorTextAnim"> MEMBERS</h1>
-      <h5 class="colorTextAnim">NII</h5>
-      <h6>japan</h6>
-    </section>
+    <div class="hero" id="hero">
+      <div class="mainImgContainer heroMedia">
+       <img class="mainImg heroImg" src="img/lnk01_0605.jpg" alt="main image">
+      </div>
+      <section class="intro bright heroCard">
+        <div class="introBack"></div>
+        <h1 class="colorTextAnim">MEMBER</h1>
+        <h5 class="colorTextAnim">NII</h5>
+        <h6>japan</h6>
+      </section>
+    </div>
+
     <!-- <h3 class="introText"> INTRO</h3> -->
  
     <section class="memberAll">
@@ -51,56 +58,36 @@
           <a href="https://arxiv.org/search/quant-ph?query=nemoto,+k&searchtype=author&abstracts=show&order=-announced_date_first&size=50"><div class="memberLink">LINK</div></a>
           <h4 class="memberTitle">Professor by Special Appointment, NII</h4>
         </div>
-        
         <div class="memberCard">
           <h3 class="memberGroupe"> nii</h3>
           <h2 class="memberName">Akihito Soeda </h2>
           <a href="https://arxiv.org/search/quant-ph?query=soeda,+a&searchtype=author&abstracts=show&order=-announced_date_first&size=50"><div class="memberLink">LINK</div></a>
           <h4 class="memberTitle">Associate Professor, NII</h4>
         </div>
-        
         <div class="memberCard">
           <h3 class="memberGroupe"> nii</h3>
           <h2 class="memberName">Hiroo Azuma </h2>
           <a href="https://arxiv.org/search/quant-ph?query=azuma,+h&searchtype=author&abstracts=show&order=-announced_date_first&size=50"><div class="memberLink">LINK</div></a>
           <h4 class="memberTitle">Professor by Special Appointment, NII</h4>
         </div>
-        
         <div class="memberCard">
           <h3 class="memberGroupe"> nii</h3>
           <h2 class="memberName">Asuka Igarashi</h2>
           <a href="https://arxiv.org/search/quant-ph?query=igarashi,+a&searchtype=author&abstracts=show&order=-announced_date_first&size=50"><div class="memberLink">LINK</div></a>
           <h4 class="memberTitle">Postdoc, NII</h4>
         </div>
-        
         <div class="memberCard">
           <h3 class="memberGroupe"> nii</h3>
           <h2 class="memberName">Kohei Kobayashi</h2>
           <a href="https://arxiv.org/search/quant-ph?query=kobayashi,+k&searchtype=author&abstracts=show&order=-announced_date_first&size=50"><div class="memberLink">LINK</div></a>
           <h4 class="memberTitle">Postdoc, NII</h4>
         </div>
-        
-        <div class="memberCard">
-          <h3 class="memberGroupe"> nii</h3>
-          <h2 class="memberName">Romain Piron</h2>
-          <a href="https://arxiv.org/search/quant-ph?query=piron%2C+r&searchtype=author&abstracts=show&order=-announced_date_first&size=50"><div class="memberLink">LINK</div></a>
-          <h4 class="memberTitle">Postdoc, NII</h4>
-        </div>
-
         <div class="memberCard">
           <h3 class="memberGroupe"> nii</h3>
           <h2 class="memberName">Aoi Hayashi</h2>
           <a href="https://arxiv.org/search/quant-ph?query=hayashi,+a&searchtype=author&abstracts=show&order=-announced_date_first&size=50"><div class="memberLink">LINK</div></a>
           <h4 class="memberTitle">PhD Student, NII</h4>
         </div>
-
-        <div class="memberCard">
-          <h3 class="memberGroupe"> nii</h3>
-          <h2 class="memberName">Mariia Kvashchuk</h2>
-          <a href="https://www.lip6.fr/actualite/personnes-fiche.php?ident=D2859"><div class="memberLink">LINK</div></a>
-          <h4 class="memberTitle">PhD Student, NII <br/> & LIP6, Sorbonne University</h4>
-        </div>
-
         <div class="memberCard">
           <h3 class="memberGroupe"> nii</h3>
           <h2 class="memberName">Reina Kobayashi</h2>
@@ -115,7 +102,7 @@
           <h3 class="memberGroupe"> nii</h3>
           <h2 class="memberName">William John Munro </h2>
           <a href="https://arxiv.org/search/quant-ph?searchtype=author&query=Munro,+W+J"><div class="memberLink">LINK</div></a>
-          <h4 class="memberTitle">Visiting Professor, NII <br/>(also Professor, Okinawa Institute of Science and Technology) </h4>
+          <h4 class="memberTitle">Visiting Professor, NII <br>(also Professor, Okinawa Institute of Science and Technology) </h4>
         </div>
       </div>
     </section>
