@@ -1,336 +1,80 @@
-@font-face {
-  font-family: font01;
-  src: url(T-StarPro-Bold.ttf);
-}
-@font-face {
-  font-family: font02;
-  src: url(T-StarPro-Heavy.ttf);
-}
-@font-face {
-  font-family: font03;
-  src: url(T-StarPro-Light.ttf);
-}
-@font-face {
-  font-family: font04;
-  src: url(T-StarPro-Medium.ttf);
-}
-
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  font-family: 'Lato';
-  text-decoration: none;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-body {
-  line-height: 1;
-  background-color: #f2f2f2;
-}
-ol, ul {
-  list-style: none;
-}
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-.colorDivAnim {
-  background-color: red;
-}
-
-
-
-
-header{
-  height: 80px;
-  position: relative;
-}
-nav{
-  display: flex;
- 
-  position: fixed;
-  width: 100%;
-  z-index: 30;
-  height: 90px;
-
-}
-
-.nav-toggle{
-  position: absolute;
-  opacity: 0;
-  width: 1px;
-  height: 1px;
-  pointer-events: none;
-}
-
-
-.navContainer{
-  display: flex;
-  margin-top: 40px;
-  right: 80px;
-  position: absolute;
-}
-.navLeft{
-margin: 0 auto 0 8%;
-}
-.navRight{
-margin: 0 8% 0 auto;
-}
-li{
-  margin: 0 20px;
-}
-
-.mainImg{
-  width: 100vw;
-  margin-top: 90px;
-}
-.bottomImg{
-width: calc(100vw - 110px);
-  position: absolute;
-  z-index: -10;
-  bottom: -500px;
-}
-.imgContain{
-  position: absolute;
-  height: 500px;
-  margin-top: -500px;
-  overflow: hidden;
-  width: calc(100% - 100px);
-  left: 50px;
-}
-.introBack{
-  width: 65%;
-  height: 370px;
-  background-color: #fff;
-  position: absolute;
-  right: 0px;
-  top: 440px;
-}
-li a{
-  font-family: font01;
-  text-decoration: none;
-  color: #fff;
-  font-size: 14px;
-  letter-spacing: 2px;
-}
-li a:hover{
-  color: #959595;
-}
-.mainImgContainer{
-  height: 720px;
-  overflow: hidden;
-}
-.back01{
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  z-index: -1;
-
-}
-
-
-
-.introText{
-font-family: font01;
-  color: #9f9f9f;
-  width: 100%;
-  text-align: center;
-  margin-top: 150px;
-  font-size: 40px;
-  letter-spacing: 7px;
-  margin-bottom: 50px;
-}
-
-
-.baseline{
-  margin: 0px 0px 0px 50px;
-  background-color: white;
-  width: 50%;
-  padding: 50px 50px 50px 50px;
-}
-.introtext h2 {
-  font-size: 50px;
-  padding: 0px 0px 0px 0px;
-  color: #000;
-  font-family: font01;
-}
-.introtext p{
-  font-size: 19px;
-  padding: 40px 0px 0px 0px;
-  line-height: 1.3;
-  letter-spacing: 2px;
-  color: #000;
-  font-family: font03;
-}
-
-footer{
-  padding: 60px 0px 30px 0px;
-  background-color: #7d7d7d;
-}
-#allbuttonlink{
-  margin: 0 auto;
-  width: 700px;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-}
-#allbuttonlink{
-  margin: 0 auto;
-  width: 700px;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-}
-#alllink{
-  margin: 50px auto 0;
-  width: 700px;
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  color: #182640;
-  font-size: 20px;
-}
-#alllink p{
- width: 130px;
-  text-align: center;
-  border-left-width: 2px;
-  border-left-style: solid;
-  border-right-width: 2px;
-  border-right-style: solid;
-  text-decoration: none;
-  color: #fff;
-  font-family: font04;
-  font-size: 23px;
-}
-#alllink p:hover{
-  color: #4f4f4f;
-}
-
-#legal p{
-  margin: 50px auto 0px auto;
-  width: 700px;
-  color: #fff;
-  font-size: 20px;
-  text-align: center;
-  font-family: font03;
-}
-
-.container{
-  padding-top: 15px;
-  padding-bottom: 1px;
-}
-.line{
-  height: 10px;
-}
-
-
-.intro h1{
- position: absolute;
-  font-size: 65px;
-  z-index: 5;
-  top: 530px;
-  left: 38%;
-  font-family: font01;
-  letter-spacing: 16px;
-}
-.intro h4{
- position: absolute;
-  font-size: 28px;
-  z-index: 5;
-  font-weight: 600;
-  top: 670px;
-  color: #9f9f9f;
-  width: 35%;
-  left: 38%;
-  font-family: font03;
-}
-.intro h5{
- position: absolute;
-  right: 49px;
-  font-size: 44px;
-  z-index: 5;
-  top: 460px;
-  color: #000;
-  font-family: font02;
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Qu Center</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/index.css" media="(min-width: 769px)">
+    <link rel="stylesheet" href="css/index_good_for_mobile.css" media="(max-width: 768px)">
+    <link rel="stylesheet" href="css/stylesheet.css">
+  </head>
   
-}
-.intro h6{
-  position: absolute;
-  right: 50px;
-  font-size: 17px;
-  z-index: 5;
-  font-weight: 400;
-  top: 500px;
-  color: #000;
-  text-align: right;
-  font-family: font01;
-}
+  <body>
 
-.logo01{
-  position: relative;
-    z-index: 10;
-  width: 55px;
-  top: -14px;
-  left: 0px;
-}
-.logo02{
-  fill: red;
-  z-index: 10;
-  width: 60px;
-  top: 40px;
-  position: relative;
-}
+  <!-- Header -->
+  <header class="grey01">
+    <nav class="menu">
+     <p class="topTitle">Global Research Center <br>for Quantum Information Science</p>
+     <img class="logo01" src="img/quclogo.svg" alt="logo quantum center">
+        <input class="nav-toggle" type="checkbox" id="nav-toggle">
+        <label class="hamburger" for="nav-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
 
+      <ul class="navContainer">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="research.html">RESEARCH</a></li>
+        <li><a href="member.html">MEMBER</a></li>
+      </ul>
 
+    </nav>
+  </header>
+  <!-- Page content -->
+  <main>
+  <div class="hero" id="hero">
+    <div class="mainImgContainer heroMedia">
+      <img class="mainImg heroImg" src="img/lnk01_0606.jpg" alt="main image">
+    </div>
 
-
-.grey01{
-  background-color: #242424;
-  position: fixed;
-  width: calc(100% - 100px);
-  height: 90px;
-  z-index: 10;
-  padding: 0px 50px;
-}
-.topTitle{
- color: white;
-  position: absolute;
-  bottom: 14px;
-  font-family: font03;
-  font-size: 14px;
-}
-
-.baseline2{
-  margin-left: calc(50% - 150px);
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
+    <section class="intro bright heroCard">
+      <div class="introBack"></div>
+      <h1 class="colorTextAnim">QUANTUM<br>CENTER</h1>
+      <h4>Global Research Center for Quantum Information Science</h4>
+      <h5 class="colorTextAnim">NII</h5>
+      <h6>japan</h6>
+    </section>
+  </div>
+    <h3 class="introText"> INTRO</h3>
+    <section class="baseline">
+      <article class="introtext">
+        <h2>Welcome to the Global Research Center for Quantum Information Science</h2>
+        <p>Our research center is dedicated to advancing quantum information science by exploring fundamental principles at the intersection of quantum physics and information theory. Over the past few decades, quantum technologies have experienced remarkable progress. Although many engineering challenges still demand practical solutions, continuous theoretical inquiry remains equally essential to drive sustained advancements.</p>
+      </article>
+    </section>
+    
+    <section class="baseline baseline2">
+     
+      <article class="introtext">
+        <h2>Join us as we shape the future of quantum information technologies and explore their profound implications for science, industry, society, and our future.</h2>
+        <p>As a member of Japan's Inter-University Research Institute Corporations, we actively support an international community of scholars, students, and industry partners through collaborative research opportunities and extensive academic resources.</p>
+      </article>
+    </section>
+  </main>
+  <div class="imgContain">
+      <img class="bottomImg" src="img/lnk01_0176.jpg" alt="main image"> 
+     </div>
+  <!-- Footer -->
+  <footer class="dark">
+              <div id="alllink">
+                  <a href="mailto:soeda@nii.ac.jp">
+                      <p class="colorTextAnim">Contact Us</p>
+                  </a>
+              </div>
+              <div id="legal">
+                  <p class="colorTextAnim">Copyright © National Institute of Informatics, Japan</p>
+              </div>
+          </footer>
+  </body>
+</html>
