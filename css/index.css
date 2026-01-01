@@ -109,12 +109,16 @@ li{
   margin: 0 20px;
 }
 
+main{
+  margin-bottom: 80px;
+}
+
 .mainImg{
   width: 100vw;
   margin-top: 90px;
 }
 .bottomImg{
-width: calc(100vw - 110px);
+width: calc(100vw);
   position: absolute;
   z-index: -10;
   bottom: -500px;
@@ -124,8 +128,8 @@ width: calc(100vw - 110px);
   height: 500px;
   margin-top: -500px;
   overflow: hidden;
-  width: calc(100% - 100px);
-  left: 50px;
+  width: calc(100%);
+  left: 0;
 }
 .introBack{
   width: 65%;
