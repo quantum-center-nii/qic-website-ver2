@@ -196,7 +196,8 @@ body.page-member .memberRow{
 }
 body.page-member .memberCard {
   background-color: #fff;
- z-index: 10;
+  z-index: 10;
+  padding-bottom: 50px;
 }
 body.page-member .memberName{
 color: #000;
@@ -217,7 +218,15 @@ color: #9f9f9f;
   padding: 0px 0px 0px 30px;
   font-size: 22px;
   font-family: font01;
-  margin: 15px 30px 40px 0px;
+  margin: 15px 25px 0px 0px;
+  text-align: right;
+}
+body.page-member h5.memberTitle{
+color: #9f9f9f;
+  padding: 0px 0px 0px 30px;
+  font-size: 18px;
+  font-family: font01;
+  margin: 0px 25px 0px 0px;
   text-align: right;
 }
 body.page-member .memberImg{
